@@ -1,3 +1,4 @@
+# set_license_from_stream.py
 # This example demonstrates how to set a license from a stream.
 
 import aspose.groupdocsviewer as gv

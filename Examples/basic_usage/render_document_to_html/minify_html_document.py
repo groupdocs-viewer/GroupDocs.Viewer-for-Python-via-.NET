@@ -1,3 +1,4 @@
+# minify_html_document.py
 # This example demonstrates how to enable minification of an HTML document.
 
 import aspose.groupdocsviewer as gv

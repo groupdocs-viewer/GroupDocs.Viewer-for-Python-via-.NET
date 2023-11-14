@@ -1,3 +1,4 @@
+# retrieve_and_print_document_attachments.py
 # This example demonstrates how to retrieve and print all attachments.
 
 import aspose.groupdocsviewer as gv

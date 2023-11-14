@@ -15,7 +15,7 @@ def run():
         options = gvo.HtmlViewOptions.for_embedded_resources(page_file_path_format)
 
         options.mail_storage_options.text_filter = "Viewer"
-        #options.mail_storage_options.address_filter = "groupdocs.com" # TODO The specified string is not in the form required for an e-mail address.
+        options.mail_storage_options.address_filter = "name.surname@groupdocs.com"
         viewer.view(options)
 
     print(f"\nSource document rendered successfully.\nCheck output in {output_directory}.")

@@ -1,3 +1,4 @@
+# render_to_png.py
 # This example demonstrates how to render a document into a PNG image.
 
 import aspose.groupdocsviewer as gv

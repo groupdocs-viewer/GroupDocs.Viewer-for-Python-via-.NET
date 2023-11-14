@@ -1,3 +1,4 @@
+# render_to_jpg.py
 # This example demonstrates how to render a document into a JPG image.
 
 import aspose.groupdocsviewer as gv

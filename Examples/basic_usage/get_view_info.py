@@ -1,3 +1,6 @@
+# get_view_info.py
+# This example demonstrates how to get basic information about document and document view.
+
 import aspose.groupdocsviewer as gv
 import aspose.groupdocsviewer.options as gvo
 import test_files

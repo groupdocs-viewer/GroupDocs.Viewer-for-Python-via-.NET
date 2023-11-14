@@ -1,3 +1,4 @@
+# render_to_html_with_embedded_resources.py
 # This example demonstrates how to render a document into HTML with embedded resources.
 
 import aspose.groupdocsviewer as gv

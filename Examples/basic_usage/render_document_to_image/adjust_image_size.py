@@ -1,3 +1,4 @@
+# adjust_image_size.py
 # This example demonstrates how to adjust the width and height of the output images.
 
 import aspose.groupdocsviewer as gv

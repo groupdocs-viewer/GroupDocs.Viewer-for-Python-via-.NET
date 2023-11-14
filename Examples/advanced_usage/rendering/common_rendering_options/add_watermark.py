@@ -1,3 +1,4 @@
+# add_watermark.py
 # This example demonstrates how to render a document and add a watermark to each page.
 
 import os

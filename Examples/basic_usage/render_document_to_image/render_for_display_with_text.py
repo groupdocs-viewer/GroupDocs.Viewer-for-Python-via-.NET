@@ -1,3 +1,4 @@
+# render_for_display_with_text.py
 # This example demonstrates how to render a document so that the extracted text can be placed as a top layer over the image.
 
 import aspose.groupdocsviewer as gv

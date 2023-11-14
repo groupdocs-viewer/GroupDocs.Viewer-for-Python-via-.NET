@@ -1,3 +1,4 @@
+# render_to_html_with_external_resources.py
 # This example demonstrates how to render a document into HTML with external resources.
 
 import aspose.groupdocsviewer as gv

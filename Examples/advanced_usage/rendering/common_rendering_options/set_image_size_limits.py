@@ -1,3 +1,4 @@
+# set_image_size_limits.py
 # This example demonstrates how to set output image size limits when rendering documents to JPG/PNG.
 
 import os

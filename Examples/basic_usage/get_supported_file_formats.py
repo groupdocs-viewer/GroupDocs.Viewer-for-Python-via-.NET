@@ -1,3 +1,6 @@
+# get_supported_file_formats.py
+# This examples demonstrates how to print out all supported file types.
+
 import aspose.groupdocsviewer as gv
 
 def run():

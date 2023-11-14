@@ -1,3 +1,4 @@
+# get_text_coordinates.py
 # This example demonstrates how to extract text from a document.
 
 import aspose.groupdocsviewer as gv

@@ -1,4 +1,6 @@
+# set_metered_license.py
 # This example demonstrates how to set a Metered license.
+# Learn more about Metered license at https://purchase.groupdocs.com/faqs/licensing/metered.
 
 import aspose.groupdocsviewer as gv
 
