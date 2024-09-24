@@ -2,8 +2,8 @@
 # This example demonstrates how to filter messages by text/sender/recipient when rendering Lotus Notes data files.
 
 import os
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import test_files
 import utils
 

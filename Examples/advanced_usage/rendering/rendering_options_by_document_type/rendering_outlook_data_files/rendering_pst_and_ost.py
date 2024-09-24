@@ -1,8 +1,8 @@
 # rendering_pst_and_ost.py
 # This example demonstrates how to render PST/OST document into HTML, JPG, PNG, PDF.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 import test_files
 import utils

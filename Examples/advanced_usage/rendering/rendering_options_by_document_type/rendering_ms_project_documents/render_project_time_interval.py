@@ -1,11 +1,11 @@
 # render_project_time_interval.py
 # This example demonstrates how to render project document within the specified time interval.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-import aspose.groupdocsviewer.results as gvr
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+import groupdocs.viewer.results as gvr
 from datetime import timedelta
-from aspose.pycore import *
+from groupdocs.pycore import *
 import os
 import test_files
 import utils

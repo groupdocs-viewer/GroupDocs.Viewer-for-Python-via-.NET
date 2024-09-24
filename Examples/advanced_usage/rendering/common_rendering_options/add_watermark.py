@@ -1,8 +1,8 @@
 # This example demonstrates how to render a document and add a watermark to each page.
 
 import os
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import test_files
 import utils
 

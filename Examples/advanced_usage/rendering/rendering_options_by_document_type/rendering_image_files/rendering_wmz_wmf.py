@@ -1,8 +1,8 @@
 # rendering_wmz_wmf.py
 # This example demonstrates how to render WMZ/WMF document into HTML, JPG, PNG, PDF.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

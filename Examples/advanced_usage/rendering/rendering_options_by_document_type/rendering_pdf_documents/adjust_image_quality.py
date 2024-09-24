@@ -3,8 +3,8 @@
 
 import os
 from os.path import join
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import test_files
 import utils
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
 # /*
 # [enum]: ImageQuality
 
-#             <fullname>: aspose.groupdocsviewer.options.ImageQuality
+#             <fullname>: groupdocs.viewer.options.ImageQuality
 
 #             <original>: GroupDocs.Viewer.Options.ImageQuality
 

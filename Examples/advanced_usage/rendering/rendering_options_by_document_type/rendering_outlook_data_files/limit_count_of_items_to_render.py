@@ -1,8 +1,8 @@
 # limit_count_of_items_to_render.py
 # This example demonstrates how to limit the count of items when rendering Outlook data files.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 import test_files
 import utils

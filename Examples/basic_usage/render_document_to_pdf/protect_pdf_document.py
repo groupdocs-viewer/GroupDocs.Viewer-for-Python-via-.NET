@@ -1,8 +1,8 @@
 # protect_pdf_document.py
 # This example demonstrates how to protect the output PDF document.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

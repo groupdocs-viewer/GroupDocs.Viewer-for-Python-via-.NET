@@ -1,9 +1,9 @@
 # render_layers.py
 # This example demonstrates how to render layers.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-import aspose.groupdocsviewer.results as gvr
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+import groupdocs.viewer.results as gvr
 import os
 from os.path import join
 import test_files

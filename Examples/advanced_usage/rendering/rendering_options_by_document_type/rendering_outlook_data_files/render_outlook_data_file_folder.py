@@ -1,8 +1,8 @@
 # render_outlook_data_file_folder.py
 # This example demonstrates how to render messages from the Inbox folder of an Outlook data file.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 import test_files
 import utils

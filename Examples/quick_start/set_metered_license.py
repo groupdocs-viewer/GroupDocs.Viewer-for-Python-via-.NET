@@ -1,6 +1,6 @@
 # This example demonstrates how to set a Metered license.
 
-import aspose.groupdocsviewer as gv
+import groupdocs.viewer as gv
 
 def run():
     public_key = "*****"  # Your public key

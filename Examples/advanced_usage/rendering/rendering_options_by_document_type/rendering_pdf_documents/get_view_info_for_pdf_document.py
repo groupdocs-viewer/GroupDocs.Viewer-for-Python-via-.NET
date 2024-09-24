@@ -1,10 +1,10 @@
 # get_view_info_for_pdf_document.py
 # This example demonstrates how to get view info for a PDF document.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-import aspose.groupdocsviewer.results as gvr
-from aspose.pycore import *
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+import groupdocs.viewer.results as gvr
+from groupdocs.pycore import *
 
 import test_files
 

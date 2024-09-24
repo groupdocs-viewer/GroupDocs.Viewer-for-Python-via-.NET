@@ -2,8 +2,8 @@
 # This example demonstrates how to reorder pages in the output PDF document.
 
 import os
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import test_files
 import utils
 

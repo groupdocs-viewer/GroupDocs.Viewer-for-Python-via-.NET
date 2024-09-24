@@ -1,7 +1,7 @@
 # This example demonstrates how to enable minification of an HTML document.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

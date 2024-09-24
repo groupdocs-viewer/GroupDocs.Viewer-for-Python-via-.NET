@@ -1,8 +1,8 @@
 # adjust_quality_of_jpg_images.py
 # This example demonstrates how to adjust the quality of JPG images in the output PDF document.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

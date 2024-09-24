@@ -2,9 +2,9 @@
 # This example demonstrates how to add custom fonts to use when rendering documents.
 
 import os
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.fonts as gvf
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.fonts as gvf
+import groupdocs.viewer.options as gvo
 import test_files
 import utils
 
@@ -22,7 +22,7 @@ def run():
         html_options = gvo.HtmlViewOptions.for_embedded_resources(page_file_path_format)
         viewer.view(html_options)
 
-    # TODO:  RuntimeError: Proxy error(FileNotFoundException): Could not load file or assembly 'System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. Не удается найти указанный файл.
+    # TODO:  RuntimeError: Proxy error(FileNotFoundException): Could not load file or assembly 'System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ.
     
     print(f"\nSource document rendered successfully.\nCheck output in {output_directory}.")
 

@@ -1,8 +1,8 @@
 # split_drawing_into_tiles.py
 # This example demonstrates how to split drawing into tiles.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

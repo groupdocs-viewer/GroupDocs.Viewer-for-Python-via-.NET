@@ -1,9 +1,9 @@
 # check_file_is_encrypted.py
 # This example demonstrates how to check if the file is encrypted.
 
-import aspose.groupdocsviewer as gv
-# import aspose.groupdocsviewer.results as gvr
-# from aspose.pycore import *
+import groupdocs.viewer as gv
+# import groupdocs.viewer.results as gvr
+# from groupdocs.pycore import *
 import test_files
 
 def run():    

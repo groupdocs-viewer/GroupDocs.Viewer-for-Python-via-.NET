@@ -1,7 +1,7 @@
 # This example demonstrates how to render a document so that the extracted text can be placed as a top layer over the image.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

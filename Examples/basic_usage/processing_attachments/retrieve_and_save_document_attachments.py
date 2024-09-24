@@ -2,7 +2,7 @@
 # This example demonstrates how to retrieve and save attachments.
 
 import os
-import aspose.groupdocsviewer as gv
+import groupdocs.viewer as gv
 import test_files
 import utils
 

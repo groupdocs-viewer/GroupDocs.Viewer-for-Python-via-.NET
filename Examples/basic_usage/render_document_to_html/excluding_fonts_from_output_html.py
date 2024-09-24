@@ -1,7 +1,7 @@
 # This example demonstrates how to exclude the Arial font from the output when rendering into HTML.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

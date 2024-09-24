@@ -1,8 +1,8 @@
 # adjust_quality_when_rendering_to_jpg.py
 # This example demonstrates how to adjust the quality of the output JPG images.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

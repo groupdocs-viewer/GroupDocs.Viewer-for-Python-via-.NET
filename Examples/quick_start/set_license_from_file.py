@@ -1,4 +1,4 @@
-import aspose.groupdocsviewer as gv
+import groupdocs.viewer as gv
 import utils
 import os
   

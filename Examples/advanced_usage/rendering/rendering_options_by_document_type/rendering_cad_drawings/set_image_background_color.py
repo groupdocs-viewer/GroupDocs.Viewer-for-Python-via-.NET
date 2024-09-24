@@ -1,10 +1,10 @@
 # set_image_background_color.py
 # This example demonstrates how to adjust output image size and set a background color when rendering CAD drawings.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-import aspose.pydrawing as drawing
-#from aspose.pycore import *
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+import groupdocs.pydrawing as drawing
+#from groupdocs.pycore import *
 import os
 from os.path import join
 import test_files

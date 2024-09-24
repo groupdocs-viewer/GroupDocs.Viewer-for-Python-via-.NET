@@ -1,8 +1,8 @@
 # adjust_time_unit.py
 # This example demonstrates how to adjust the time unit of the project.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 import test_files
 import utils

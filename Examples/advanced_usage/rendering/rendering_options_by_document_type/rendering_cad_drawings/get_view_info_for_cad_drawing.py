@@ -1,10 +1,10 @@
 # get_view_info_for_cad_drawing.py
 # Get a list of all layouts and layers of a CAD drawing
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-import aspose.groupdocsviewer.results as gvr
-from aspose.pycore import *
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+import groupdocs.viewer.results as gvr
+from groupdocs.pycore import *
 import os
 from os.path import join
 import test_files

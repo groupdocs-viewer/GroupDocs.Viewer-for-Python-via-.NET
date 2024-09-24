@@ -1,6 +1,6 @@
 # This example demonstrates how to retrieve and print all attachments.
 
-import aspose.groupdocsviewer as gv
+import groupdocs.viewer as gv
 import test_files
 
 def run():

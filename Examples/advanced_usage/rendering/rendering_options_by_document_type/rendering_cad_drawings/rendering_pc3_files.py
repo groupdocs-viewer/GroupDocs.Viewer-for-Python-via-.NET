@@ -1,8 +1,8 @@
 # rendering_pc3_files.py
 # This example demonstrates how to render CAD drawings with PC3 configuration to JPG.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

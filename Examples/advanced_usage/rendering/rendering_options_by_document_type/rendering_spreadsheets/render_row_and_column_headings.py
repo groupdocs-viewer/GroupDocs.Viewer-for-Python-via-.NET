@@ -2,8 +2,8 @@
 # This example demonstrates how to render row and column headings.
 
 import os
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import test_files
 import utils
 

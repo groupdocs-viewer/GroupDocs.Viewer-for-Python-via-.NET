@@ -1,8 +1,8 @@
 # datetime_format_and_time_zone_offset.py
 # This example demonstrates how to set custom date-time format and time zone offset
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

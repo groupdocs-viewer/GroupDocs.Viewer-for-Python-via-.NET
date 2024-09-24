@@ -1,8 +1,8 @@
 # adjust_output_image_size.py
 # This example demonstrates how to adjust output image size when rendering CAD drawings.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

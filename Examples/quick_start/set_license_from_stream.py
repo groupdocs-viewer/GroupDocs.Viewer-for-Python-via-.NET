@@ -1,6 +1,6 @@
 # This example demonstrates how to set a license from a stream.
 
-import aspose.groupdocsviewer as gv
+import groupdocs.viewer as gv
 import os
 from os.path import join
 import utils

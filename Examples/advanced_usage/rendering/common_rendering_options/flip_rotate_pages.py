@@ -2,9 +2,9 @@
 # This example demonstrates how to rotate the first page 90 degrees clockwise.
 
 import os
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-#import aspose.groupdocsviewer.rotation as rotation
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+#import groupdocs.viewer.rotation as rotation
 import test_files
 import utils
 
@@ -15,7 +15,7 @@ def run():
     with gv.Viewer(test_files.sample_docx) as viewer:
         pdf_options = gvo.PdfViewOptions(output_file_path)
 # mod = getattr(parent_mod, parts[-1])
-# AttributeError: cannot access submodule 'rotation' of module 'aspose.groupdocsviewer' (most likely due to a circular import)
+# AttributeError: cannot access submodule 'rotation' of module 'groupdocs.viewer' (most likely due to a circular import)
         #pdf_options.rotate_page(1, rotation.Rotation.on_90_degree)
 
         viewer.view(pdf_options)

@@ -1,8 +1,8 @@
 # render_original_page_size.py
 # This example demonstrates how to render pages to PNG and set page size to be the same as size of pages in a source document.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 import test_files
 import utils

@@ -2,10 +2,10 @@
 # This example demonstrates how to render RAR document into HTML, JPG, PNG, PDF.
 
 import os
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-import aspose.groupdocsviewer.results as gvr
-from aspose.pycore import *
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+import groupdocs.viewer.results as gvr
+from groupdocs.pycore import *
 import test_files
 import utils
 

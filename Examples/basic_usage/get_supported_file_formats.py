@@ -1,4 +1,4 @@
-import aspose.groupdocsviewer as gv
+import groupdocs.viewer as gv
 
 def run():
     supported_file_types = gv.FileType.get_supported_file_types()

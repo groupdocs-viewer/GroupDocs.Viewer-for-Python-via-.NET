@@ -1,8 +1,8 @@
 # rendering_tga.py
 # This example demonstrates how to render Truevision TGA (TARGA) (tga) format.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 import os
 from os.path import join
 import test_files

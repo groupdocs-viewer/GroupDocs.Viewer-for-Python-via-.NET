@@ -1,12 +1,12 @@
 # get_view_info_for_archive_file.py
 # This example demonstrates how to get view info for Archive files.
 
-import aspose.groupdocsviewer as gv
-import aspose.groupdocsviewer.options as gvo
-import aspose.groupdocsviewer.results as gvr
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
+import groupdocs.viewer.results as gvr
 import os
 import test_files
-from aspose.pycore import *
+from groupdocs.pycore import *
 
 def run():
     with gv.Viewer(test_files.sample_zip_with_folders) as viewer:
