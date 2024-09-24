@@ -2,3 +2,4 @@ __pycache__
 Output/
 .venv
 .pypirc
+.DS_Store
