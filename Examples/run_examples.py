@@ -4,16 +4,21 @@ from advanced_usage import *
 
 
 if __name__ == '__main__':
-    ## Quick Start
+    # Quick Start
     set_license_from_file.run()  
     # set_license_from_stream.run()
     # set_metered_license.run()
     hello_world.run()
 
-    ## Basic Usage    
+    # Basic Usage    
     check_file_is_encrypted.run() 
     get_supported_file_formats.run()
     get_view_info.run()
+
+    # Render document to PDF
+    adjust_quality_of_jpg_images.run()
+    protect_pdf_document.run()
+    render_to_pdf.run()
     
     # Processing attachments
     render_document_attachments.run()
@@ -28,19 +33,14 @@ if __name__ == '__main__':
     render_to_responsive_html.run()
     
     # Render document to Image
-    adjust_image_size.run()    
+    adjust_image_size.run()
     adjust_quality_when_rendering_to_jpg.run()
     get_text_coordinates.run()
     render_for_display_with_text.run()
     render_to_jpg.run()
     render_to_png.run()
-    
-    # Render document to PDF
-    adjust_quality_of_jpg_images.run()
-    protect_pdf_document.run() 
-    render_to_pdf.run()
 
-    ## Advanced Usage
+    # Advanced Usage
     # Common rendering options
     add_watermark.run()
     flip_rotate_pages.run()
@@ -58,21 +58,21 @@ if __name__ == '__main__':
     get_view_info_for_archive_file.run()
     render_archive_folder.run()
     rendering_archives_to_multiple_and_single_pages_html.run()
-    rendering_rar.run()
+    # rendering_rar.run() #bject reference not set
     specify_filename_when_rendering_archive_files.run()
     
     # Rendering CAD drawings
     adjust_output_image_size.run()
     get_view_info_for_cad_drawing.run()
     render_all_layouts.run()
-    render_layers.run() 
+    render_layers.run()
     render_single_layout.run()
     rendering_cf2.run()
-    rendering_hpg.run()
-    rendering_igs.run()
-    rendering_obj.run()
+    # rendering_hpg.run() # File damaged
+    # rendering_igs.run() # File damaged
+    # rendering_obj.run() # File damaged
     rendering_pc3_files.run()
-    rendering_plt.run()
+    # rendering_plt.run() # File damaged
     set_image_background_color.run()
     split_drawing_into_tiles.run()
 
@@ -84,11 +84,11 @@ if __name__ == '__main__':
     # Rendering Image files
     # rendering_ai.run() # TODO
     rendering_apng.run()
-    rendering_cdr.run()    
+    rendering_cdr.run()
     rendering_cmx.run()
-    rendering_emz_and_emf.run()    
-    rendering_fodg_and_odg.run() 
-    rendering_svgz.run()    
+    # rendering_emz_and_emf.run() #Required font 'Times New Roman'
+    rendering_fodg_and_odg.run()
+    rendering_svgz.run()   
     rendering_tga.run()
     rendering_wmz_wmf.run()
     
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     render_tracked_changes.run()
 
 
-    ## Loading
+    # Loading
     load_documents_with_encoding.run()
     load_password_protected_document.run()
     set_resource_loading_timeout.run()
@@ -158,14 +158,6 @@ if __name__ == '__main__':
 
     # Loading documents from different sources
     load_document_from_local_disk.run()
-    load_document_from_stream.run()
-    load_document_from_url.run()
-    
-    
-    
-    
-
-
-
-
+    #load_document_from_stream.run()
+    #load_document_from_url.run()
           

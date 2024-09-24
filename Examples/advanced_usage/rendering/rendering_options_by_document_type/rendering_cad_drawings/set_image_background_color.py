@@ -3,7 +3,7 @@
 
 import groupdocs.viewer as gv
 import groupdocs.viewer.options as gvo
-import groupdocs.pydrawing as drawing
+import groupdocs.viewer.drawing as drawing
 #from groupdocs.pycore import *
 import os
 from os.path import join
@@ -17,7 +17,7 @@ def run():
     with gv.Viewer(test_files.sample_dwg_with_layouts_and_layers) as viewer:
         png_options = gvo.PngViewOptions(page_file_path_format)
         png_options.cad_options = gvo.CadOptions.for_rendering_by_width(800)      
-        png_options.cad_options.background_color = drawing.Color(0, 128, 0)  # RGB color for green 
+        png_options.cad_options.background_color = drawing.Argb32Color.from_rgb(0, 128, 0)  # RGB color for green 
         viewer.view(png_options)
 
     print(f"\nSource document rendered successfully.\nCheck output in {output_directory}")

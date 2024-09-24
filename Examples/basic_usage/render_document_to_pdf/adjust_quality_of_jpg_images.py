@@ -17,7 +17,11 @@ def run():
 
     with gv.Viewer(test_files.jpg_image_pptx) as viewer:
         pdf_options = gvo.PdfViewOptions(output_file_path)
-        pdf_options.jpg_quality = 10
+
+        pdf_optimization_options = gvo.PdfOptimizationOptions()
+        pdf_optimization_options.image_quality = 10
+        
+        pdf_options.pdf_optimization_options = pdf_optimization_options
 
         viewer.view(pdf_options)
 
