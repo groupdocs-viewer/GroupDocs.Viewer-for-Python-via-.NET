@@ -7,6 +7,7 @@ Before installing and running the [groupdocs-viewer-net](https://pypi.org/projec
 - **CPU**: ARM64 (Apple Silicon: M1, M2, etc.)  
 - **Python**: Version **≥ 3.9** and **≤ 3.12**  
 - **.NET Runtime**: [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later for macOS  
+- **libgdiplus**: Can be installed with `brew install mono-libgdiplus`
 
 ## 2. Create a Virtual Environment  
 
