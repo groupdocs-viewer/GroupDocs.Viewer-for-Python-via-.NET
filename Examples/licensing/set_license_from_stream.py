@@ -10,7 +10,7 @@ def set_license_from_stream():
         print(f"License file not found at: {license_path}")
         return
 
-    # Create a readable steam
+    # Create a readable stream
     with open(license_path, "rb") as license_stream:
         # Instantiate License and set the license
         license = License()

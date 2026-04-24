@@ -23,11 +23,10 @@ docker build -f Dockerfile -t groupdocs-viewer-for-python-via-net:hello-world-do
 ```
 
 This will:
-* Use Python 3.11 slim base image
-* Install Microsoft Fonts for proper rendering
-* Install System.Drawing.Common dependencies (libgdiplus, libc6-dev)
-* Install globalization and cryptography dependencies (libicu67, libssl1.1)
-* Install the `groupdocs-viewer-net` package
+* Use the `python:3.11-slim` base image (Debian bookworm)
+* Install `libgdiplus` (System.Drawing.Common backend), `libfontconfig1`, and `libicu-dev` (globalization)
+* Install Microsoft TrueType fonts for accurate rendering of Office documents
+* Install the `groupdocs-viewer-net==26.4.0` package
 
 ## 2. Run the Docker Container
 
@@ -52,13 +51,14 @@ The `--rm` flag automatically removes the container after it exits, and the `-v`
 
 ## 3. View the Results
 
-After the container runs, check the `output` directory. You should find one or more HTML files (one per page) named `page_0.html`, `page_1.html`, etc.
+After the container runs, check the `output` directory. You should find one or more HTML files (one per page) named `page_1.html`, `page_2.html`, etc.
+
+> **Evaluation mode**: without a license, the output carries an **Aspose evaluation watermark** and is capped at a small number of pages. To render the full document, supply a valid license file — see the [Licensing and Subscription](https://docs.groupdocs.com/viewer/python-net/getting-started/licensing-and-subscription/) documentation page.
 
 ## How It Works
 
 The Docker container:
 1. Loads the `sample.docx` file from the container's working directory
-2. Converts it to HTML using GroupDocs.Viewer
+2. Renders it to HTML using GroupDocs.Viewer
 3. Saves the output files to `/output` inside the container
 4. The volume mount makes these files accessible in your local `output` directory
-

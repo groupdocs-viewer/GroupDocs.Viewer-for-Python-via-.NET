@@ -15,12 +15,17 @@ def render_psd_with_custom_fonts():
     # Call SetFontSources method and supply font sources as arguments.
     FontSettings.set_font_sources(folderFontSource, additionalFontSource)
 
-    # Load PSD file
-    with Viewer("sample.psd") as viewer:
-        # Create a JPG image.
-        viewOptions = JpgViewOptions("render_psd_with_custom_fonts/psd_with_custom_fonts.jpg")
-        viewOptions.default_font_name = "Arial"
-        viewer.view(viewOptions)
+    try:
+        # Load PSD file
+        with Viewer("sample.psd") as viewer:
+            # Create a JPG image.
+            viewOptions = JpgViewOptions("render_psd_with_custom_fonts/psd_with_custom_fonts.jpg")
+            viewOptions.default_font_name = "Arial"
+            viewer.view(viewOptions)
+    finally:
+        # Reset FontSettings so the registered folders don't leak into
+        # subsequent rendering calls in the same process.
+        FontSettings.reset_font_sources()
 
 if __name__ == "__main__":
     render_psd_with_custom_fonts()

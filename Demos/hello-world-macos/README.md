@@ -4,7 +4,7 @@
 
 Before installing and running the [groupdocs-viewer-net](https://pypi.org/project/groupdocs-viewer-net/) package on macOS, ensure that your system meets the following requirements:
 
-* **Python**: Version **3.5–3.13** (inclusive)
+* **Python**: Version **3.5–3.14** (inclusive)
 * **libgdiplus**: Install via Homebrew:
 
   ```bash
@@ -34,7 +34,7 @@ source .venv/bin/activate
 Create a `requirements.txt` file with the following content:
 
 ```text
-groupdocs-viewer-net==25.12
+groupdocs-viewer-net==26.4.0
 ```
 
 ## 5. Install Dependencies
@@ -53,35 +53,53 @@ Create a file named `render_docx_to_html.py` with the following content:
 """
 Convert a DOCX document to HTML using GroupDocs.Viewer for Python via .NET.
 
-This script reads a sample.docx file and generates HTML pages (one per page)
-in the output directory with embedded resources.
+Reads sample.docx from the working directory and writes one HTML page per
+document page into output/ with embedded resources (CSS, fonts, images).
+
+If a license is available via the GROUPDOCS_LIC_PATH environment variable or
+as a .lic file next to the script, it is applied automatically. Otherwise the
+render runs in evaluation mode — a small number of pages with a watermark.
 """
 
-from groupdocs.viewer import Viewer
+import glob
+import os
+
+from groupdocs.viewer import License, Viewer
 from groupdocs.viewer.options import HtmlViewOptions
 
 
+def apply_license_if_available():
+    """Apply a GroupDocs license from GROUPDOCS_LIC_PATH or a local .lic file."""
+    env_path = os.environ.get("GROUPDOCS_LIC_PATH")
+    if env_path and os.path.isfile(env_path):
+        License().set_license(env_path)
+        return env_path
+
+    # Fall back: any *.lic file next to this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    for lic_path in glob.glob(os.path.join(script_dir, "*.lic")):
+        License().set_license(lic_path)
+        return lic_path
+
+    return None
+
+
 def render_docx_to_html():
-    """
-    Renders a DOCX document to HTML format.
-    
-    The function opens the sample.docx file, creates HTML view options
-    with embedded resources, and generates HTML files in the output directory.
-    Each page of the document will be saved as a separate HTML file.
-    """
-    # Open the DOCX file using Viewer context manager for automatic resource cleanup
+    """Render sample.docx to output/page_{N}.html with embedded resources."""
+    applied = apply_license_if_available()
+    if applied:
+        print(f"License applied from {applied}")
+    else:
+        print("Running in evaluation mode (no license found).")
+
     with Viewer("sample.docx") as viewer:
-        # Configure HTML view options with embedded resources
-        # The pattern "output/page_{0}.html" will generate files like:
-        # output/page_0.html, output/page_1.html, etc.
+        # The {0} placeholder is replaced with the 1-based page number, so
+        # this pattern generates output/page_1.html, output/page_2.html, ...
         options = HtmlViewOptions.for_embedded_resources("output/page_{0}.html")
-        
-        # Render the document to HTML using the specified options
         viewer.view(options)
 
 
 if __name__ == "__main__":
-    # Execute the conversion when the script is run directly
     render_docx_to_html()
 ```
 
@@ -97,7 +115,9 @@ Run the script:
 python render_docx_to_html.py
 ```
 
-As a result, one or more HTML files (one per page) will be generated in the current directory.
+As a result, HTML files (one per page) will be generated under an `output/` directory as `page_1.html`, `page_2.html`, …
+
+> **Evaluation mode**: without a license, the output carries an **Aspose evaluation watermark** and is capped at a small number of pages. To render the full document, supply a valid license file — see the [Licensing and Subscription](https://docs.groupdocs.com/viewer/python-net/getting-started/licensing-and-subscription/) documentation page.
 
 ## 9. Deactivate the Virtual Environment
 
