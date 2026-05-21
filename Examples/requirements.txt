@@ -1,2 +1,2 @@
-groupdocs-viewer-net==26.4
+groupdocs-viewer-net==26.5.0
 requests>=2.32.5

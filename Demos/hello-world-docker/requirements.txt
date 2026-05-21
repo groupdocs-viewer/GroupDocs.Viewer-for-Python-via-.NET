@@ -1,1 +1,1 @@
-groupdocs-viewer-net==26.4.0
+groupdocs-viewer-net==26.5.0

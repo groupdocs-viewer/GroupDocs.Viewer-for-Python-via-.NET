@@ -3,7 +3,7 @@ from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
 
 def render_one_page_per_sheet():
     # Load spreadsheet
-    with Viewer("Products.xlsx") as viewer:
+    with Viewer("products.xlsx") as viewer:
         # Convert the spreadsheet to PDF.
         viewOptions = PdfViewOptions("render_one_page_per_sheet/one_page_per_sheet.pdf")
         # Render each worksheet to one page.

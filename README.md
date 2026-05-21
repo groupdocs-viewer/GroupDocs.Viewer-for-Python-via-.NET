@@ -4,11 +4,11 @@
 
 [Product Page](https://products.groupdocs.com/viewer/python-net/) | [Docs](https://docs.groupdocs.com/viewer/python-net/) | [Demos](https://products.groupdocs.app/viewer/family) | [API Reference](https://reference.groupdocs.com/viewer/python-net/) | [Blog](https://blog.groupdocs.com/category/viewer/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/viewer) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
 
-[GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net/) is a document rendering API that renders 170+ file formats — DOCX, PDF, XLSX, PPTX, CAD, email, archives, and more — to HTML, PDF, PNG, or JPEG.
+[GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net/) is a document rendering API that renders 190+ file formats — DOCX, PDF, XLSX, PPTX, CAD, email, archives, and more — to HTML, PDF, PNG, or JPEG.
 
 ## Features
 
-- **170+ Formats**: Render Microsoft Office, PDF, HTML, CAD, email, archives, images, and many more formats.
+- **190+ Formats**: Render Microsoft Office, PDF, HTML, CAD, email, archives, images, and many more formats.
 - **Multiple Output Formats**: Render documents to HTML, PDF, PNG, and JPEG.
 - **Embedded or External Resources**: Produce self-contained HTML pages or HTML with separate CSS, fonts, and images.
 - **Document Inspection**: Retrieve format, page count, and attachments without rendering.
@@ -19,9 +19,11 @@
 
 GroupDocs.Viewer for Python via .NET supports a wide range of file formats, including Word, Excel, PowerPoint, PDF, OpenDocument, Image, Email, and many others. See the [full list of supported formats](https://docs.groupdocs.com/viewer/python-net/getting-started/supported-document-formats/) for details.
 
+> **Platform note:** Project files (MPP, MPT, MPX) and PSD render on **Windows only**. On Linux/macOS the package uses `GroupDocs.Viewer.CrossPlatform`, which supports every other format — including Visio — but not those two. The `render_project_*` and `render_psd_with_custom_fonts` examples are skipped automatically off Windows.
+
 ## Get Started
 
-1. **Set Up Environment**: Ensure that [Python 3.9+](https://www.python.org/downloads/) is installed on your system.
+1. **Set Up Environment**: Ensure that [Python 3.5 – 3.14](https://www.python.org/downloads/) is installed on your system.
 
 2. **Get the Code**: Clone or download this repository.
 

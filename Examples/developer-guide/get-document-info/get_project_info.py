@@ -4,6 +4,11 @@ from groupdocs.viewer.options import ViewInfoOptions
 from groupdocs.viewer.results import ProjectManagementViewInfo
 
 def get_project_info():
+    import sys
+    if sys.platform != "win32":
+        print("Skipping: MS Project files (MPP/MPT/MPX) render on Windows only "
+              "(GroupDocs.Viewer.CrossPlatform on Linux/macOS does not support Project).")
+        return
     with Viewer("sample.mpp") as viewer:
         info = viewer.get_view_info(ViewInfoOptions.for_html_view())
         project_info = cast(ProjectManagementViewInfo, info)

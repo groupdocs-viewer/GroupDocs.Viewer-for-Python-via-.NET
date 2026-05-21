@@ -2,6 +2,11 @@ from groupdocs.viewer import Viewer
 from groupdocs.viewer.options import HtmlViewOptions, TimeUnit
 
 def render_project_with_time_unit():
+    import sys
+    if sys.platform != "win32":
+        print("Skipping: MS Project files (MPP/MPT/MPX) render on Windows only "
+              "(GroupDocs.Viewer.CrossPlatform on Linux/macOS does not support Project).")
+        return
     # Load Project file
     with Viewer("sample.mpp") as viewer:
         # Convert the document to HTML.
