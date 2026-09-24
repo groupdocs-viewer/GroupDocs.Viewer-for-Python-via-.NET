@@ -23,10 +23,10 @@ docker build -f Dockerfile -t groupdocs-viewer-for-python-via-net:hello-world-do
 ```
 
 This will:
-* Use the `python:3.11-slim` base image (Debian bookworm)
-* Install `libgdiplus` (System.Drawing.Common backend), `libfontconfig1`, and `libicu-dev` (globalization)
-* Install Microsoft TrueType fonts for accurate rendering of Office documents
-* Install the `groupdocs-viewer-net==26.4.0` package
+* Use the `python:3.13-slim` base image
+* Install `libfontconfig1` + `fontconfig` (font discovery) and `libicu-dev` (globalization); `libgdiplus` is not needed
+* Install the DejaVu and Liberation fonts (Liberation is metric-compatible with Arial, Times New Roman and Courier New)
+* Install the `groupdocs-viewer-net==26.9.0` package
 
 ## 2. Run the Docker Container
 

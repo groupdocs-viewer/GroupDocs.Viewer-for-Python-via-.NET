@@ -19,7 +19,7 @@
 
 GroupDocs.Viewer for Python via .NET supports a wide range of file formats, including Word, Excel, PowerPoint, PDF, OpenDocument, Image, Email, and many others. See the [full list of supported formats](https://docs.groupdocs.com/viewer/python-net/getting-started/supported-document-formats/) for details.
 
-> **Platform note:** Project files (MPP, MPT, MPX) and PSD render on **Windows only**. On Linux/macOS the package uses `GroupDocs.Viewer.CrossPlatform`, which supports every other format — including Visio — but not those two. The `render_project_*` and `render_psd_with_custom_fonts` examples are skipped automatically off Windows.
+> **Platform note:** Photoshop (PSD, PSB), Adobe Illustrator (AI) and OneNote (ONE) files render on **Windows only**. Linux and macOS use the cross-platform build of the engine, which supports every other format — including Visio and, since 26.9, Microsoft Project (MPP, MPT, MPX). The `render_psd_with_custom_fonts` example is skipped automatically off Windows.
 
 ## Get Started
 

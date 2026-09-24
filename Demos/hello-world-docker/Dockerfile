@@ -8,15 +8,18 @@ FROM python:3.13-slim
 ENV DEBIAN_FRONTEND=noninteractive
 
 # System dependencies for the .NET runtime and cross-platform rendering —
-# kept in sync with the Examples/ Dockerfile at the repo root:
+# the Examples/ Dockerfile at the repo root minus the Microsoft core fonts:
 #  - libicu-dev: .NET globalization (ICU)
-#  - libgdiplus + libfontconfig1 + fontconfig: GDI+/font support
+#  - libfontconfig1 + fontconfig: font discovery (no libgdiplus: since 26.9
+#    no rendering path needs it)
 #  - fonts-dejavu + fonts-liberation: real fonts so text renders; the
 #    Liberation set is metric-compatible with Arial/Times/Courier (no EULA,
 #    no contrib component, no SourceForge download — reliable builds).
+# This demo renders a DOCX, which Liberation covers. The repo-root image also
+# installs ttf-mscorefonts-installer because MS Project files need it.
 RUN apt-get update -qq \
     && apt-get install -y --no-install-recommends \
-        libicu-dev libgdiplus libfontconfig1 fontconfig \
+        libicu-dev libfontconfig1 fontconfig \
         fonts-dejavu fonts-liberation \
     && fc-cache -f \
     && apt-get clean \

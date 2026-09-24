@@ -5,13 +5,8 @@
 Before installing and running the [groupdocs-viewer-net](https://pypi.org/project/groupdocs-viewer-net/) package on macOS, ensure that your system meets the following requirements:
 
 * **Python**: Version **3.5–3.14** (inclusive)
-* **libgdiplus**: Install via Homebrew:
 
-  ```bash
-  brew install mono-libgdiplus
-  ```
-
-> **Note**: If Homebrew is not installed, install it first from [https://brew.sh](https://brew.sh).
+No other packages are needed. Since 26.9 the macOS wheel does not use `libgdiplus`, so `brew install mono-libgdiplus` is no longer required.
 
 ## 2. Create a Virtual Environment
 
@@ -34,7 +29,7 @@ source .venv/bin/activate
 Create a `requirements.txt` file with the following content:
 
 ```text
-groupdocs-viewer-net==26.4.0
+groupdocs-viewer-net==26.9.0
 ```
 
 ## 5. Install Dependencies

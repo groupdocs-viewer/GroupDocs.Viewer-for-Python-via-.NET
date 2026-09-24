@@ -5,12 +5,12 @@ from groupdocs.viewer.fonts import FolderFontSource, SearchOption, FontSettings
 from groupdocs.viewer.options import JpgViewOptions
 
 def render_psd_with_custom_fonts():
-    # PSD rendering is available on Windows only. The Linux/macOS build
-    # (GroupDocs.Viewer.CrossPlatform) does not support PSD and raises
+    # PSD rendering is available on Windows only. The Linux/macOS wheels run
+    # the cross-platform engine, which does not support PSD and raises
     # "Failed to detect file type", so skip this example off Windows.
     if sys.platform != "win32":
         print("Skipping: PSD rendering is supported on Windows only "
-              "(GroupDocs.Viewer.CrossPlatform on Linux/macOS does not render PSD).")
+              "(the Linux/macOS engine does not render PSD).")
         return
 
     # Create font sources.

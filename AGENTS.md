@@ -3,7 +3,7 @@
 
 > Instructions for AI agents working with this package.
 
-Render documents to HTML, PNG, JPG, or PDF -- 170+ file formats supported.
+Render documents to HTML, PNG, JPG, or PDF -- 190+ file formats supported.
 
 ## Install
 
@@ -231,8 +231,8 @@ with Viewer("with_attachments.msg") as viewer:
         # buf.getvalue()   # attachment bytes
 ```
 
-**Note**: .NET 26.4's native `SaveAttachment` only exposes the
-`(Attachment, Stream)` overload. The path-accepting form is a Python-
+**Note**: the .NET engine's native `SaveAttachment` only exposes the
+`(Attachment, Stream)` overload (still true in 26.8). The path-accepting form is a Python-
 side convenience layered on top — it wraps the open/close for you.
 
 ## Font sources
@@ -400,7 +400,9 @@ Viewer exposes 190+ file formats on a single flat `FileType` class — access vi
 | Source code / Text | `MD, LOG, AS, AS3, ASM, BAT, C, CC, CMAKE, CPP, CS, CXX, DIFF, ...` (190+ total — use `FileType.get_supported_file_types()` to enumerate at runtime) |
 <!-- end:filetypes -->
 
-Use `FileType.from_extension("docx")` when you don't know which family owns a format — it returns the correct `FileType` instance. `FileType.from_stream(stream)` sniffs file headers. `FileType.get_supported_file_types()` returns the full list.
+Use `FileType.from_extension("docx")` when you don't know which family owns a format — it returns the correct `FileType` instance. `FileType.from_stream(stream)` sniffs file headers. `FileType.get_supported_file_types()` returns what the running engine can render — on Linux/macOS it omits PSD, PSB, AI and ONE (193 extensions there, 197 on Windows) — so it is the reliable platform gate.
+
+**Platform note:** Linux/macOS wheels run the cross-platform engine, which does **not** render **Photoshop** (`PSD, PSB`), **Adobe Illustrator** (`AI`) or **OneNote** (`ONE`) — those render only on Windows. Every other family works on every platform, including Visio and, since 26.9, Microsoft Project (`MPP, MPT, MPX`). The Python API is the same in every wheel, so `FileType.PSD`, `FileType.PSB`, `FileType.AI` and `FileType.ONE` exist everywhere — but on Linux/macOS touching one raises `GroupDocsViewerException: Member 'GroupDocs.Viewer.FileType.PSD' not found.` Gate on `FileType.get_supported_file_types()` instead.
 
 ## Key Patterns
 
@@ -456,8 +458,19 @@ Use `FileType.from_extension("docx")` when you don't know which family owns a fo
 | Platform | Requirements |
 |---|---|
 | Windows | None |
-| Linux | `apt install libgdiplus libfontconfig1 ttf-mscorefonts-installer` |
-| macOS | `brew install mono-libgdiplus` |
+| Linux | `apt install libicu-dev fontconfig ttf-mscorefonts-installer` (Debian: enable `contrib`) — no `libgdiplus` |
+| macOS | None |
+
+**Format support by platform:**
+
+| Format family | Windows | Linux / macOS |
+|---|:---:|:---:|
+| Photoshop (PSD, PSB) | Yes | No |
+| Adobe Illustrator (AI) | Yes | No |
+| OneNote (ONE) | Yes | No |
+| All other formats (Office, PDF, Visio, Project, CAD, images, email, archives, eBooks, web, …) | Yes | Yes |
+
+Linux/macOS wheels run the cross-platform build of the engine (`GroupDocs.Viewer.Net60`), which renders every format except Photoshop (PSD, PSB), Adobe Illustrator (AI) and OneNote — those are Windows-only. Everything else works on every platform, including Visio and, since 26.9, Microsoft Project (MPP, MPT, MPX).
 
 ## Troubleshooting
 
@@ -465,9 +478,11 @@ Use `FileType.from_extension("docx")` when you don't know which family owns a fo
 
 **`Cannot convert String to CreatePageStream`** (fixed in 26.4.0+) -- older wheels had a static-factory dispatcher that leaked .NET cast errors. Upgrade with `pip install --upgrade groupdocs-viewer-net`.
 
-**`System.Drawing.Common is not supported`** -- install libgdiplus: `sudo apt install libgdiplus` (Linux) / `brew install mono-libgdiplus` (macOS)
+**`GroupDocsViewerException: Failed to detect file type`** when rendering a PSD, PSB, AI or ONE file on Linux/macOS -- those formats are Windows-only; the cross-platform engine does not include them. Render them on Windows.
 
-**`Gdip` type initializer exception** -- outdated libgdiplus: `brew reinstall mono-libgdiplus` (macOS)
+**`DllNotFoundException: libgdiplus` / `Gdip` type initializer exception** -- not expected: since 26.9 no libgdiplus is needed on Linux or macOS. If it appears, install it (`sudo apt install libgdiplus` / `brew install mono-libgdiplus`) and report the document to support.
+
+**`Cannot find fallback font 'Generic Sans Serif'`** when rendering an MPP/MPT/MPX file on Linux -- MS Project rendering needs the Microsoft core fonts: `sudo apt install ttf-mscorefonts-installer && sudo fc-cache -f` (Debian: enable `contrib`). Liberation fonts do not satisfy this lookup.
 
 **Garbled text / missing fonts** -- install fonts: `sudo apt install ttf-mscorefonts-installer fontconfig && sudo fc-cache -f`
 
