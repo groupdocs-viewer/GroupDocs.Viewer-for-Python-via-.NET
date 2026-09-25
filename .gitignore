@@ -56,6 +56,9 @@ resource_*
 *.css
 *.js
 
+# Font cache Aspose.Drawing writes into the working directory (Linux runs; Windows runs do not)
+**/Aspose/Drawing/SystemFontCache.xml
+
 # License files
 *.lic
 
